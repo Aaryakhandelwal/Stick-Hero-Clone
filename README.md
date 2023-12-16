@@ -39,4 +39,6 @@ Stick-Hero is an engaging and challenging platformer game where players control 
 
 git clone https://github.com/Aaryakhandelwal/Stick-Hero-Game.git
 
+2. Change the absolute paths of Music, SavedGames.ser and Games.ser file 
+
 2. Run the HelloApplication.java file
