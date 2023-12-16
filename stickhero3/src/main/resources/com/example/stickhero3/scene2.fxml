@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#invertAvatar" onMousePressed="#extendStick" onMouseReleased="#stopStick" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stickhero3.Scene1Controller">
+<AnchorPane fx:id="anchorPane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#invertAvatar" onMousePressed="#extendStick" onMouseReleased="#stopStick" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stickhero3.Scene1Controller">
    <children>
       <ImageView id="anchorPane2" fitHeight="535.0" fitWidth="833.0" pickOnBounds="true">
          <image>

@@ -251,6 +251,8 @@ public class Scene1Controller {
                 new KeyFrame(Duration.millis(500), new KeyValue(avatar.layoutYProperty(), 600))
         );
         if (ifFalling) {
+            Music bgm = new Music("C:\\Users\\aarya\\OneDrive\\Desktop\\STICK-HERO\\Stick-Hero-Game\\stickhero3\\src\\main\\java\\com\\example\\stickhero3\\bgmusic.wav");
+            bgm.start();
             timelineCrashAvatar.play();
             timelineCrashAvatar.setOnFinished(
                     actionEvent -> {
@@ -277,8 +279,10 @@ public class Scene1Controller {
         }
     }
 
-    public void invertAvatar() {
-        System.out.println("SPACE");
+    public void invertAvatar(KeyEvent event) {
+        if (event.getCode() == javafx.scene.input.KeyCode.SPACE){
+            System.out.println("SPACE");
+        }
     }
 
     private void moveAvatar() {
@@ -327,14 +331,23 @@ public class Scene1Controller {
         PauseTransition pause = new PauseTransition(Duration.millis(650));
         pause.setOnFinished(event -> {
 
+            Rectangle newStick = new Rectangle();
+            newStick.setHeight(30);
+            newStick.setWidth(7);
+            newStick.setLayoutY(291);
+            newStick.setLayoutX(107);
+            newStick.setFill(stick.getFill());
+            anchorPane2.getChildren().add(newStick);
+            anchorPane2.getChildren().remove(stick);
+            stick = newStick;
 
             Random random1 = new Random();
-            int min = 50;
+            int min = 25;
             int max = 200;
             int randomWidth = random1.nextInt(max - min + 1) + min;
 
             Random random2 = new Random();
-            int min1 = 100;
+            int min1 = 50;
             int max1 = 250;
             int randomDistance = random2.nextInt(max1 - min1 + 1) + min1;
 
@@ -360,15 +373,7 @@ public class Scene1Controller {
             anchorPane2.getChildren().remove(midpoint);
             midpoint=newMidpoint;
 
-            Rectangle newStick = new Rectangle();
-            newStick.setHeight(30);
-            newStick.setWidth(7);
-            newStick.setLayoutY(291);
-            newStick.setLayoutX(107);
-            newStick.setFill(stick.getFill());
-            anchorPane2.getChildren().add(newStick);
-            anchorPane2.getChildren().remove(stick);
-            stick = newStick;
+
         });
         pause.play();
 
