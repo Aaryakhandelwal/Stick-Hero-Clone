@@ -171,7 +171,7 @@ public class Scene1Controller {
     }
 
     private void serializeGame() {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:\\Users\\aarya\\OneDrive\\Desktop\\STICK-HERO\\Stick-Hero-Game\\stickhero3\\src\\main\\resources\\com\\example\\stickhero3\\gameState.ser" ))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:\\Users\\aarya\\OneDrive\\Desktop\\STICK-HERO\\Stick-Hero-Game\\Project\\src\\main\\resources\\com\\example\\stickhero3\\gameState.ser" ))) {
             oos.writeObject(game);
         } catch (IOException e) {
             e.printStackTrace();
@@ -179,7 +179,7 @@ public class Scene1Controller {
     }
 
     private void deserializeSavedGame() {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("C:\\Users\\aarya\\OneDrive\\Desktop\\STICK-HERO\\Stick-Hero-Game\\stickhero3\\src\\main\\resources\\com\\example\\stickhero3\\savedGameState.ser" ))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("C:\\Users\\aarya\\OneDrive\\Desktop\\STICK-HERO\\Stick-Hero-Game\\Project\\src\\main\\resources\\com\\example\\stickhero3\\savedGameState.ser" ))) {
             game = (Game) ois.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -251,8 +251,7 @@ public class Scene1Controller {
                 new KeyFrame(Duration.millis(500), new KeyValue(avatar.layoutYProperty(), 600))
         );
         if (ifFalling) {
-            Music bgm = new Music("C:\\Users\\aarya\\OneDrive\\Desktop\\STICK-HERO\\Stick-Hero-Game\\stickhero3\\src\\main\\java\\com\\example\\stickhero3\\bgmusic.wav");
-            bgm.start();
+
             timelineCrashAvatar.play();
             timelineCrashAvatar.setOnFinished(
                     actionEvent -> {

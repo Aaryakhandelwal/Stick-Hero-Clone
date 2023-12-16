@@ -24,7 +24,7 @@ public class Scene3Controller {
     Label score;
 
     private void deserializeGame(){
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("C:\\Users\\aarya\\OneDrive\\Desktop\\STICK-HERO\\Stick-Hero-Game\\stickhero3\\src\\main\\resources\\com\\example\\stickhero3\\gameState.ser"))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("C:\\Users\\aarya\\OneDrive\\Desktop\\STICK-HERO\\Stick-Hero-Game\\Project\\src\\main\\resources\\com\\example\\stickhero3\\gameState.ser"))) {
             game = (Game) ois.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -62,7 +62,7 @@ public class Scene3Controller {
 
     private void serializeSavedGame(){
         deserializeGame();
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:\\Users\\aarya\\OneDrive\\Desktop\\STICK-HERO\\Stick-Hero-Game\\stickhero3\\src\\main\\resources\\com\\example\\stickhero3\\savedGameState.ser"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:\\Users\\aarya\\OneDrive\\Desktop\\STICK-HERO\\Stick-Hero-Game\\Project\\src\\main\\resources\\com\\example\\stickhero3\\savedGameState.ser"))) {
             oos.writeObject(game);
         } catch (IOException e) {
             e.printStackTrace();
