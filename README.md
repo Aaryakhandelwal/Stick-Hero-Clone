@@ -1,4 +1,5 @@
 # Stick-Hero-Game
+![Game Scene](game-scene.png)
 
 ## Description
 Stick-Hero is an engaging and challenging platformer game where players control a character named Stick-Hero. The objective is to traverse between platforms by skillfully extending a stick to bridge the gaps between pillars. The game features multiple pillars of varying widths, requiring precise timing and strategic stick extensions. Players can collect cherries to boost their score, and a reviving feature allows them to continue the game once using collected cherries.
