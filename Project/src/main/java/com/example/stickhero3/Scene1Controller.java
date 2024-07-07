@@ -28,8 +28,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Scene1Controller {
-
-
     private Stick Stick;
     private Avatar Avatar;
     private Game game = new Game(0, 0);
@@ -55,7 +53,8 @@ public class Scene1Controller {
     private Rectangle pillar1;
     @FXML
     private Rectangle pillar2;
-    @FXML private Rectangle midpoint;
+    @FXML
+    private Rectangle midpoint;
 
     private ActionEvent event;
 

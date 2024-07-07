@@ -9,16 +9,17 @@ public class Avatar implements InitSetup {
     private boolean ifFall;
     private static Avatar Avatar = null;
 
-    private  Avatar( ImageView avatar) {
+    private  Avatar(ImageView avatar) {
         this.avatar = avatar;
     }
+    private static Avatar instance;
 
     public static Avatar getInstance(ImageView avatar){
-        if (avatar==null){
+        if (instance==null){
             Avatar = new Avatar(avatar);
+            instance = Avatar;
         }
         return Avatar;
-
     }
 
     @Override
@@ -30,7 +31,6 @@ public class Avatar implements InitSetup {
             setIfInverted(false);
             setAvatar(avatar);
         }
-
     }
 
     public String getName() {

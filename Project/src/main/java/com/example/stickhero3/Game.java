@@ -7,15 +7,13 @@ public class Game implements Serializable {
     private int playerScore;
     private int playerRewards;
 
-    public int getPlayerScore() {
-        return playerScore;
-    }
-
     public Game(int playerScore, int playerRewards) {
         this.playerScore = playerScore;
         this.playerRewards = playerRewards;
     }
-
+    public int getPlayerScore() {
+        return playerScore;
+    }
     public void setPlayerScore(int playerScore) {
         this.playerScore = playerScore;
     }

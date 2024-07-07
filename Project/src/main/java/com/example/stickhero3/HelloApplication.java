@@ -17,8 +17,6 @@ public class HelloApplication extends Application {
         return highscore;
     }
 
-
-
     @Override
     public void start(Stage stage) throws IOException {
         try {
@@ -27,7 +25,7 @@ public class HelloApplication extends Application {
             Scene scene = new Scene(fxmlLoader.load(), 849, 535);
 
             //background music
-            Music bgm = new Music("C:\\Users\\aarya\\OneDrive\\Desktop\\STICK-HERO\\Stick-Hero-Game\\Project\\src\\main\\java\\com\\example\\stickhero3\\bgmusic.wav");
+            Music bgm = new Music("C:\\Users\\aarya\\OneDrive\\Desktop\\Stick-Hero-Clone\\Project\\src\\main\\java\\com\\example\\stickhero3\\bgmusic.wav");
             bgm.start();
             // Set title and show the stage
             stage.setTitle("Stick Hero");
